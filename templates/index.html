@@ -4,44 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Flask App - Home</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #f4f4f9;
             color: #333;
-            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-        header {
-            background-color: #007bff;
+        .hero-section {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
             color: white;
-            padding: 2rem 0;
-        }
-        main {
-            padding: 3rem 1rem;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.75rem 1.5rem;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .btn:hover {
-            background-color: #0056b3;
+            padding: 4rem 1rem;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Team Flask App</h1>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">Team Flask App</a>
+            <div>
+                <a href="/register" class="btn btn-outline-light btn-sm fw-semibold">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header class="hero-section text-center shadow-sm">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Welcome to Team Flask App</h1>
+            <p class="lead mt-2">A collaborative baseline application built by the team.</p>
+        </div>
     </header>
-    <main>
-        <h2>Landing Page</h2>
-        <p>This is the initial baseline application setup by the team member.</p>
+
+    <!-- Main Content Area -->
+    <main class="container text-center py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card border-0 shadow-sm p-4">
+                    <h2 class="h3 fw-semibold text-primary mb-3">Landing Page</h2>
+                    <p class="text-muted">This is the initial baseline application setup by the team. Click below to create a new user account.</p>
+                    <div>
+                        <a href="/register" class="btn btn-primary btn-lg mt-2 px-4 shadow-sm">Create Account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto py-3 bg-light text-center text-muted border-top">
+        <small>&copy; 2026 Team Flask App. All rights reserved.</small>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
