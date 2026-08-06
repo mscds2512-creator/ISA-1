@@ -13,5 +13,10 @@ def register():
         return redirect(url_for('home'))
     return render_template('register.html')
 
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        return redirect(url_for('home'))
+    return render_template('login.html')
 if __name__ == '__main__':
     app.run(debug=True)
